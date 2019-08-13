@@ -1,5 +1,5 @@
 # vue-template
-A Vue standard template including Vuetify, Vou Router and Pug.
+A Vue standard template including Vuetify 2.0, Vou Router and Pug.
 
 :exclamation: It is important to have previous knowledge on Node.js and Vue.js!
 
