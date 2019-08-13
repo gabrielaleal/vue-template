@@ -23,7 +23,25 @@ First, I installed vue-router using yarn (you can also use npm if you're trying 
 ```yarn add vue-router```
 
 After that, I've created a folder called ```/router``` inside ```/src``` (that's how I learned it and how I like to organize it). Inside ```/router```, I've created two files: ```index.js``` and ```routes.js```.
-```routes.js``` is where we're going to declare all the routes in our project. And ```index.js``` is where I've imported Vue Router and basically said "Vue, we're using Vue Router now". Also, inside ```index.js``` I told Vue Router where our routes are.
+```routes.js``` is where we're going to declare all the routes in our project. Everytime you need a new page to your app, you will create the .vue file inside ```/src/pages```, then you go on ou routes file, import this new .vue file and declare the new route, for exemple:
+
+```
+// inside routes.js
+import NewPage from '../pages/NewPage.vue'
+
+export default [
+  {
+     meta: {
+      public: true // you're saying if this page is public or not (in this case it is :))
+     },
+     path: '/newpage', // the path of this new page
+     component: NewPage, // the one you imported
+     name: 'newpage'
+  }
+]
+```
+
+```index.js``` is where I've imported Vue Router and basically said "Vue, we're using Vue Router now". Also, inside ```index.js``` I told Vue Router where our routes are.
 
 ```
 import Vue from 'vue'
