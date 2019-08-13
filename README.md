@@ -87,7 +87,8 @@ This main.js file is (literally) the main JavaScript file that drives our app.
 
 Finally, Pug! I could explain, but I found [here](https://imasters.com.br/desenvolvimento/codigos-html-mais-organizados-e-limpos-com-pug) the perfect explanation. Translating it to english:
 > It is a high-performance, feature-rich template engine implemented with JavaScript for the Node.js ecosystem. It acts as an intermediary between Node and HTML, meaning at run time Pug substitutes project variables with current values and then sends the resulting HTML string to the client.
-Also, Pug is based on indentation and whitespace. This means there are no open and close tags, which makes the code much cleaner, more organized and easier to understand.
+
+Also, Pug is based on indentation and whitespace (plain text, and you can learn [here](https://pugjs.org/language/plain-text.html) about it and its syntax). This means there are no open and close tags, which makes the code much cleaner, more organized and easier to understand.
 
 To install it, here's what I've done:
 
