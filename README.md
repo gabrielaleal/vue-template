@@ -1,6 +1,8 @@
 # vue-template
 A Vue standard template including Vuetify, Vou Router and Pug.
 
+:exclamation: It is important to have previous knowledge on Node.js and Vue.js!
+
 ## First steps
 First, create Vue app using vue-cli:
 
@@ -23,7 +25,7 @@ First, I installed vue-router using yarn (you can also use npm if you're trying 
 ```yarn add vue-router```
 
 After that, I've created a folder called ```/router``` inside ```/src``` (that's how I learned it and how I like to organize it). Inside ```/router```, I've created two files: ```index.js``` and ```routes.js```.
-```routes.js``` is where we're going to declare all the routes in our project. Everytime you need a new page to your app, you will create the .vue file inside ```/src/pages```, then you go on ou routes file, import this new .vue file and declare the new route, for exemple:
+```routes.js``` is where we're going to declare all the routes in our project. Everytime you need a new page to your app, you will create the .vue file inside ```/src/pages``` (I created this folder containing all the pages - it's all about organization), then you go on ou routes file, import this new .vue file and declare the new route, for exemple:
 
 ```
 // inside routes.js
@@ -76,3 +78,46 @@ new Vue({
 ```
 
 This main.js file is (literally) the main JavaScript file that drives our app.
+
+### Pug
+**It is optional!** But I love the simplicity so I'd like to share it :)
+Finally, Pug! I could explain, but I found [here](https://imasters.com.br/desenvolvimento/codigos-html-mais-organizados-e-limpos-com-pug) the perfect explanation. Translating it to english:
+> It is a high-performance, feature-rich template engine implemented with JavaScript for the Node.js ecosystem. It acts as an intermediary between Node and HTML, meaning at run time Pug substitutes project variables with current values and then sends the resulting HTML string to the client.
+Also, Pug is based on indentation and whitespace. This means there are no open and close tags, which makes the code much cleaner, more organized and easier to understand.
+To install it, here's what I've done:
+
+```yarn add vue-loader vue-template-compiler```
+
+```yarn add pug-plain-loader```
+
+```yarn add pug```
+
+To use Pug, you just need to add ```lang="pug"```on the external <template> tag.
+
+## Creating your first page!
+This will be just an exemple.
+0. On ```App.vue```, change this part of the code:
+```
+<v-content>
+    <HelloWorld/>
+</v-content>
+```
+To:
+```
+<v-content>
+    <router-view/>
+</v-content>
+```
+This way, you're setting to show any page you create.
+1. At ```/pages```, create a new file, add some content, e.g.:
+```
+<template lang="pug">
+    v-container
+        h1 Hello, World!
+</template>
+```
+Remember you can use it without pug!
+2. As I mentioned earlier, now go to ```/src/router/routes.js``` to declare your new route (you can scroll up to see the code!);
+3. Access the page you created on the browser (using the path you declared, e.g.: ```localhost:8080/mynewpath```).
+
+And, yay, you did it! :sparkles:
