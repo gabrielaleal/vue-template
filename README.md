@@ -98,7 +98,12 @@ To install it, here's what I've done:
 
 ```yarn add pug```
 
-To use Pug, you just need to add ```lang="pug"```on the external <template> tag.
+To use Pug, you just need to add ```lang="pug"``` on your external template tag:
+```
+<template lang="pug">
+
+</template>
+```
 
 ## Creating your first page!
 This will be just an exemple.
